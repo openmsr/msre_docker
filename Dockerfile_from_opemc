@@ -1,0 +1,16 @@
+FROM openmc/openmc
+
+RUN apt-get -y install sudo
+RUN useradd -rm -u 1001 usr -G sudo -g root -s /bin/bash \
+ && sed -i '/%sudo.*ALL/a %sudo ALL=(ALL) NOPASSWD: ALL' /etc/sudoers
+USER usr
+WORKDIR /home/usr
+RUN mkdir msre
+COPY msre_simple.step msre/.
+COPY msre_simple.h5m msre
+COPY msre_*.py msre/. 
+#we are now ready to run the msre
+
+#install xpra to be able to get a grpahical user interface
+#or indeed jupyterlab tricky bit is to export data
+
