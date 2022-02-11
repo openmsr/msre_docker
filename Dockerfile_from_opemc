@@ -1,16 +1,27 @@
 FROM openmc/openmc
 
 RUN apt-get -y install sudo
-RUN useradd -rm -u 1001 usr -G sudo -g root -s /bin/bash \
+RUN groupadd -g 1000 usr
+RUN useradd -rm -u 1000 usr -G sudo -g usr -s /bin/bash \
  && sed -i '/%sudo.*ALL/a %sudo ALL=(ALL) NOPASSWD: ALL' /etc/sudoers
 USER usr
 WORKDIR /home/usr
-RUN mkdir msre
-COPY msre_simple.step msre/.
-COPY msre_simple.h5m msre
-COPY msre_*.py msre/. 
-#we are now ready to run the msre
+#move the cross-sections libs to a more accessible location
+RUN mkdir /home/usr/nuclear_data
+RUN sudo mv /root/nndc_hdf5 /home/usr/nuclear_data
+RUN sudo mv /root/endf-b-vii.1 /home/usr/nuclear_data
+ENV OPENMC_CROSS_SECTIONS=/home/usr/nuclear_data/nndc_hdf5/cross_sections.xml
 
+
+RUN mkdir msre
+COPY msre_simple.step msre/
+COPY msre_simple.h5m msre/
+COPY msre_*.py msre/
+
+#we are now ready to run the msre
+RUN cp -r /opt/openmc/examples/jupyter example_notebooks
 #install xpra to be able to get a grpahical user interface
 #or indeed jupyterlab tricky bit is to export data
-
+RUN sudo pip install jupyterlab
+EXPOSE 8888
+#ENTRYPOINT ["jupyter","lab","--ip=0.0.0.0","--allow-root"]
