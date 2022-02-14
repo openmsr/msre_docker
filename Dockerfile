@@ -5,7 +5,7 @@ ARG compile_cores=8
 #update system
 RUN apt-get --allow-releaseinfo-change update
 RUN DEBIAN_FRONTEND=noninteractive && apt-get --yes update && apt-get --yes upgrade
-RUN DEBIAN_FRONTEND=noninteractive && apt-get --yes install git sudo bash wget apt-utils xz-utils python3 pip
+RUN DEBIAN_FRONTEND=noninteractive && apt-get --yes install git sudo bash wget apt-utils xz-utils python3 python3-pip
 
 #RUN git clone git@github.com:openmsr/openmc_install_scripts
 
@@ -50,4 +50,4 @@ COPY msre_*.py msre/
 #we are now ready to run the msre
 RUN sudo pip install jupyterlab
 EXPOSE 8888
-#ENTRYPOINT ["jupyter","lab","--ip=0.0.0.0","--allow-root"]
+ENTRYPOINT ["jupyter","lab","--ip=0.0.0.0","--allow-root"]
