@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 PWD=`pwd`
-echo ${PWD}
 
 mountdir=$1
 if [ "a$1" == "a" ]; then
@@ -10,4 +9,4 @@ if [ ! -d $mountdir ]; then
 	mkdir $mountdir
 fi
 
-docker run -it -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -e JUPYTER_TOKEN=docker -v ${PWD}/${mountdir}:/home/usr/notebooks ebknudsen/msre:0.0.4
+docker run -it -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -e JUPYTER_TOKEN=docker -v ${PWD}/${mountdir}:/home/usr/notebooks ebknudsen/msre:0.0.5
