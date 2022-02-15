@@ -9,4 +9,4 @@ if [ ! -d $mountdir ]; then
 	mkdir $mountdir
 fi
 
-docker run -it -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -e JUPYTER_TOKEN=docker -v ${PWD}/${mountdir}:/home/usr/notebooks ebknudsen/msre:0.0.7
+docker run -it -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -e JUPYTER_TOKEN=docker -v ${PWD}/${mountdir}:/home/usr/notebooks ebknudsen/msre:0.0.8
