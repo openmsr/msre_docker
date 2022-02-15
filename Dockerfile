@@ -48,7 +48,8 @@ COPY msre_simple.h5m msre/
 COPY msre_*.py msre/
 RUN mkdir example_notebooks
 COPY MSRE.ipynb example_notebooks/
-ENV OPENMC_CROSS_SECTIONS=/home/usr/openmc/nuclear_data/mcnp_endf71b/cross_sections.xml
+ENV OPENMC_CROSS_SECTIONS=/home/usr/openmc/nuclear_data/mcnp_endfb71/cross_sections.xml
+
 #we are now ready to run the msre
 RUN sudo pip install jupyterlab
 EXPOSE 8888
