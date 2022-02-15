@@ -46,6 +46,8 @@ RUN mkdir msre
 COPY msre_simple.step msre/
 COPY msre_simple.h5m msre/
 COPY msre_*.py msre/
+RUN mkdir example_notebooks
+COPY MSRE.ipynb example_notebooks/
 
 #we are now ready to run the msre
 RUN sudo pip install jupyterlab
