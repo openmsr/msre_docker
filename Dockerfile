@@ -39,6 +39,10 @@ RUN ./openmc-install.sh "$compile_cores"
 #clean up a bit
 RUN rm *-install.sh
 RUN rm *-install.sh.done
+RUN rm $HOME/openmc/nuclear_data/*.xz
+RUN rm $HOME/openmc/nuclear_data/*-install.sh.done
+
+RUN sudo pip install jupyterlab
 
 #Here should be added COPYING in MSRE-data directories - probably needs meshes and h5m-files as well
 #include neither cubit nor onshape can be distributed like this.
@@ -51,6 +55,5 @@ COPY MSRE.ipynb example_notebooks/
 ENV OPENMC_CROSS_SECTIONS=/home/usr/openmc/nuclear_data/mcnp_endfb71/cross_sections.xml
 
 #we are now ready to run the msre
-RUN sudo pip install jupyterlab
 EXPOSE 8888
 ENTRYPOINT ["jupyter","lab","--ip=0.0.0.0","--allow-root"]
