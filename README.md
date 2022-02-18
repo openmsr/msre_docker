@@ -10,7 +10,7 @@ a Juputter notebook server. The reason d'etre for this is to run a virtual versi
         1. Open a terminal, navigate to a directory where you want to run.
         2. Download the msre-docker runscript, and run it:
         ```{bash tidy=false}
-        wget https://github.com/ebknudsen/docker-msre/raw/main/run_docker.sh  
+        wget https://raw.githubusercontent.com/ebknudsen/docker-msre/main/run_docker.sh
         ./run_docker.sh
         ```
         The script contains a call to ```docker run``` with some options preset. Among other things it sets up a subdirectory called notebooks which is shared between the conatiner and the host so that you can keep data between runs.
