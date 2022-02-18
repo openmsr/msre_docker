@@ -11,6 +11,7 @@ a Juputter notebook server. The reason d'etre for this is to run a virtual versi
         2. Download the msre-docker runscript, and run it:
         ```{bash tidy=false}
         wget https://raw.githubusercontent.com/ebknudsen/docker-msre/main/run_docker.sh
+        chmod u+x run_docker.sh
         ./run_docker.sh
         ```
         The script contains a call to ```docker run``` with some options preset. Among other things it sets up a subdirectory called notebooks which is shared between the conatiner and the host so that you can keep data between runs.
