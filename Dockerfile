@@ -18,22 +18,22 @@ WORKDIR /home/usr
 #clone the install scripts and run them
 #RUN git clone git@github.com:openmsr/openmc_install_scripts.git
 #this is done step by step to avoid invalidating the docker cache.
-COPY OpenMSR/openmc_install_scripts/Debian11/nuclear_data-install.sh .
+COPY openmc_install_scripts/Debian11/nuclear_data-install.sh .
 RUN ./nuclear_data-install.sh
  
-COPY OpenMSR/openmc_install_scripts/Debian11/embree-install.sh .
+COPY openmc_install_scripts/Debian11/embree-install.sh .
 RUN ./embree-install.sh "$compile_cores"
 
-COPY OpenMSR/openmc_install_scripts/Debian11/moab-install.sh .
+COPY openmc_install_scripts/Debian11/moab-install.sh .
 RUN ./moab-install.sh "$compile_cores"
 
-COPY OpenMSR/openmc_install_scripts/Debian11/double_down-install.sh .
+COPY openmc_install_scripts/Debian11/double_down-install.sh .
 RUN ./double_down-install.sh "$compile_cores"
 
-COPY OpenMSR/openmc_install_scripts/Debian11/dagmc-install.sh .
+COPY openmc_install_scripts/Debian11/dagmc-install.sh .
 RUN ./dagmc-install.sh "$compile_cores"
 
-COPY OpenMSR/openmc_install_scripts/Debian11/openmc-install.sh .
+COPY openmc_install_scripts/Debian11/openmc-install.sh .
 RUN ./openmc-install.sh "$compile_cores"
 
 #clean up a bit
