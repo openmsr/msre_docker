@@ -42,13 +42,13 @@ RUN rm *-install.sh.done
 RUN rm $HOME/openmc/nuclear_data/*.xz
 RUN rm $HOME/openmc/nuclear_data/*-install.sh.done
 
-RUN sudo pip install jupyterlab
+RUN sudo pip install --no-cache-dir requests jupyterlab
 
 #Here should be added COPYING in MSRE-data directories - probably needs meshes and h5m-files as well
 #include neither cubit nor onshape can be distributed like this.
 RUN mkdir msre
-COPY msre_simple.step msre/
 COPY msre_simple.h5m msre/
+COPY msre_control*.h5m msre/
 COPY msre_*.py msre/
 RUN mkdir example_notebooks
 COPY MSRE.ipynb example_notebooks/
