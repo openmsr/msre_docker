@@ -1,0 +1,3 @@
+[submodule "openmc_install_scripts"]
+	path = openmc_install_scripts
+	url = git@github.com:openmsr/openmc_install_scripts.git
