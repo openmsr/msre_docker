@@ -49,7 +49,7 @@ This repo is created for the purpose of creating a docker conatiner which includ
     ```wget --no-check-certificate https://raw.githubusercontent.com/openmsr/msre_docker/main/run_docker.sh```![wget run_docker.sh](.images/wget.png)
     Set the executable bit on this script and run it to start the docker as if on Linux:
     ```chmod u+x run_docker.sh```![chmod](.images/chmod.png)
-    At this point you should be able to run the script ```./run_docker.sh``` and point your browser to "127.0.0.1:8888" or "localhost:8888".
+    At this point you should be able to run the script ```./run_docker.sh``` and point your browser to "127.0.0.1:8888" or "localhost:8888" to get into Jupyter notebook.
     
     ## Troubleshooting:
     Should you run into problems, please ensure that the following options have been set.  
