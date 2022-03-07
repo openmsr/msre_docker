@@ -35,7 +35,7 @@ This repo is created for the purpose of creating a docker conatiner which includ
         1. Open the command prompt and issue: docker pull copenhagenatomics/msre:0.1.0. This will look like this ![docker pull](.images/cmd_prompt_pull.png)
         3. Open the docker-desktop application. The msre docker image should now be visible on the "images"-tab. ![docker images](.images/image_dld_and_run_button.png)
         4. Click on the run-button and then on options. Here we need to set a few parameters to mimic the run_docker.sh script. You should now have a dialog: ![docker-desktop options](.images/container_opts_annotated.png)
-        4. Once the docker has been downloaded and started, you should see among many other messages something about jupyter beeing served at "http://127.0.0.1:8888/lab?token=...". ![docker log](.images/cont_run_log_and_URL.png) Please copy this entire URL and paste it into the adress field of your browser. You should now see the Jupyter lab interface and may proceed.
+        4. Once the docker has been downloaded and started, you should see among many other messages something about a Jupyter Server at "http://127.0.0.1:8888/lab?token=...". ![docker log](.images/cont_run_log_and_URL.png) Please copy this entire URL and paste it into the adress field of your browser. You should now see the Jupyter lab interface and may proceed.
   
     2. Install Windows Subsystem for Linux (WSL) and run the docker from the command-line there.
     N.b. In fact the docker-desktop application also relies on WSL. 
