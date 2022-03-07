@@ -42,9 +42,18 @@ This repo is created for the purpose of creating a docker conatiner which includ
     WSL is a native windows system that enables users to run anyh and all Linux applications natively on Windows 10 and 11, including parallelization and even access to acceleration through GPUs.
     Please note that the process may require updates to Windows to be installed and also rebooting your system. Furthermore, it may also require you to edit settings in the BIOS to enable virtualization on your system.  
     First you must install a Linux kernel in WSL. Open a command prompt and run the command  
-    ```wsl --install -distribution debian``` (or shorter ```wsl -d debian```)
-    Once this is done you can start wsl, and proceed to get the run-script using wget:  
-    ```wget --no-check-certificate https://raw.githubusercontent.com/openmsre/docker-msre/main/run_docker.sh```
-    Set the executable bit on this script and run it to start the docker as if on Linux:  
-    ```chmod u+x run_docker.sh``` & ```./run_docker.sh```
-    Finally point your browser to "127.0.0.1:8888" or "localhost:8888"
+    ```wsl --install --distribution debian``` (or shorter ```wsl --install -d debian```)
+    ![install WSL](.images/Debian.png)
+    
+    Once this is done wsl will start and you can proceed proceed to get the run-script using wget:  
+    ```wget --no-check-certificate https://raw.githubusercontent.com/openmsr/msre_docker/main/run_docker.sh```![wget run_docker.sh](.images/wget.png)
+    Set the executable bit on this script and run it to start the docker as if on Linux:
+    ```chmod u+x run_docker.sh```![chmod](.images/chmod.png)
+    At this point you should be able to run the script ```./run_docker.sh``` and point your browser to "127.0.0.1:8888" or "localhost:8888".
+    
+    ## Troubleshooting:
+    Should you run into problems, please ensure that the following options have been set.  
+    First, we need to tell docker to use the debian kernel in WSL. This is done in the setting pane under resources ![docker_wsl_kernel](.images/docker_2.png)  
+    Second, a number of windows features need top be turned on:![windows features](.images/WSL_2.png)
+    
+    Should you still have problems - please contact us (for instance by opening an issue in this repo) and we'll help you out.
