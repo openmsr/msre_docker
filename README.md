@@ -1,5 +1,5 @@
 # docker-msre
-This repo is created for the purpose of creating a docker conatiner which includes not only support for OpenMC w DAGMC/MOAB, embree, and double_down libraries, but also a Jupyter notebook server. The "reason d'etre" for this is to run a virtual version of The Molten Salt Reactor experiment (MSRE). The experiment itself was performed physically in the '60s at Oak Ridge National Lab (ORNL), Tennessee.
+This repo is created for the purpose of creating a docker conatiner which includes not only support for OpenMC with DAGMC/MOAB, embree, and double_down libraries, but also a Jupyter notebook server. The "raison d'etre" for this is to run a virtual version of The Molten Salt Reactor experiment (MSRE). The experiment itself was performed physically in the '60s at Oak Ridge National Lab (ORNL), Tennessee.
 
 # Getting started:
 1. Install the docker engine on your system (for windows and MacOS: docker-desktop, for Linux: docker server)
