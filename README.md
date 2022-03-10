@@ -54,6 +54,6 @@ This repo is created for the purpose of creating a docker conatiner which includ
     ## Troubleshooting:
     Should you run into problems, please ensure that the following options have been set.  
     First, we need to tell docker to use the debian kernel in WSL. This is done in the setting pane under resources ![docker_wsl_kernel](.images/docker_2.png)  
-    Second, a number of windows features need top be turned on:![windows features](.images/WSL_2.png)
+    Second, a number of windows features need to be turned on:![windows features](.images/WSL_2.png)
     
     Should you still have problems - please contact us (for instance by opening an issue in this repo) and we'll help you out.
