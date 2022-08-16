@@ -9,7 +9,7 @@ This repository is created for the purpose of creating a docker conatiner which 
         1. Open a terminal, navigate to a directory where you want to run.
         2. Download the msre-docker runscript, and run it:
         ```{bash tidy=false}
-        wget https://raw.githubusercontent.com/openmsr/docker-msre/main/run_docker.sh
+        wget https://raw.githubusercontent.com/openmsr/msre_docker/main/run_docker.sh
         chmod u+x run_docker.sh
         ./run_docker.sh
         ```
