@@ -57,3 +57,5 @@ This repository is created for the purpose of creating a docker conatiner which 
     Second, a number of windows features need to be turned on:![windows features](.images/WSL_2.png)
     
     Should you still have problems - please contact us (for instance by opening an issue in this repo) and we'll help you out.
+3. Jupiter notebook 
+ The default password for the jupyter notebook is 'docker'.
