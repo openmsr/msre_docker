@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build -t copenhagenatomics/msre:0.1.0 .
+docker build -t copenhagenatomics/msre:0.1.1 .
