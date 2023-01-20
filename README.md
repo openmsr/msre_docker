@@ -1,3 +1,7 @@
+# This repository is about to move to https://github.com/openmsr/msre/msre\_notebook
+Its new location is very similar: It is now a subdirectory "msre\_notebook" of the main [msre](https://github.com/openmsr/msre) repository.
+All eventual new updates henceforth will be to the new location. Please clone that repository to get access to the MSRE-notebook and docker scripts.
+
 # docker-msre
 This repository is created for the purpose of creating a docker conatiner which includes not only support for OpenMC with DAGMC/MOAB, embree, and double_down libraries, but also a Jupyter notebook server. The "raison d'etre" for this is to run a virtual version of The Molten Salt Reactor Experiment (MSRE). The experiment itself was performed physically in the '60s at Oak Ridge National Lab (ORNL), Tennessee,  US.
 
